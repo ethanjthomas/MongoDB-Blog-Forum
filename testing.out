@@ -1,0 +1,197 @@
+Connection successful
+
+Welcome
+Please enter your command:
+> post blog1 ethan "Test1" "Body1" "tag1, tag2" "2020-06-20"
+Successfully inserted 6372aff8826a9328dcbcfa15 to blog1
+
+Please enter your command:
+> post blog1 hank "Test2" "Body2" "tag1" "2021-08-11"
+Successfully inserted 6372aff9826a9328dcbcfa16 to blog1
+
+Please enter your command:
+> comment blog1 "blog1.Test1" ccp "Comment1" "2021-08-09"
+Successfully inserted 6372aff9826a9328dcbcfa17 to blog1
+
+Please enter your command:
+> comment blog1 "2021-08-09" ethan "comment on a comment" "2022-02-03"
+Successfully inserted 6372aff9826a9328dcbcfa18 to blog1
+
+Please enter your command:
+> comment blog1 "blog1.Test1" ccp "Comment2" "2021-09-01"
+Successfully inserted 6372aff9826a9328dcbcfa19 to blog1
+
+Please enter your command:
+> comment blog1 "blog1.Test2" hank "Comment3" "2022-01-09"
+Successfully inserted 6372aff9826a9328dcbcfa1a to blog1
+
+Please enter your command:
+> show blog1
+
+Items in blog1
+
+- - - -
+  title: Test1
+  userName: ethan
+  permalink: blog1.Test1
+  Body:
+     Body1
+  timestamp: 2020-06-20
+
+  - - - -
+    userName: ccp
+    comment: 
+        Comment1
+    permalink: 2021-08-09
+
+    - - - -
+        userName: ethan
+        comment: 
+            comment on a comment
+        permalink: 2022-02-03
+
+
+  - - - -
+    userName: ccp
+    comment: 
+        Comment2
+    permalink: 2021-09-01
+
+- - - -
+  title: Test2
+  userName: hank
+  permalink: blog1.Test2
+  Body:
+     Body2
+  timestamp: 2021-08-11
+
+  - - - -
+    userName: hank
+    comment: 
+        Comment3
+    permalink: 2022-01-09
+
+
+Please enter your command:
+> delete blog1 "blog1.Test1" ethan "2022-11-14"
+
+Please enter your command:
+> delete blog1 "2022-02-03" ccp "2022-11-29"
+
+Please enter your command:
+> show blog1
+
+Items in blog1
+
+- - - -
+  title: Test1
+  userName: ethan
+  permalink: blog1.Test1
+  Body:
+     deleted by [ethan]
+  timestamp: 2022-11-14
+
+  - - - -
+    userName: ccp
+    comment: 
+        Comment1
+    permalink: 2021-08-09
+
+    - - - -
+        userName: ethan
+        comment: 
+            deleted by [ccp]
+        permalink: 2022-02-03
+
+
+  - - - -
+    userName: ccp
+    comment: 
+        Comment2
+    permalink: 2021-09-01
+
+- - - -
+  title: Test2
+  userName: hank
+  permalink: blog1.Test2
+  Body:
+     Body2
+  timestamp: 2021-08-11
+
+  - - - -
+    userName: hank
+    comment: 
+        Comment3
+    permalink: 2022-01-09
+
+
+Please enter your command:
+> post blog2 ccp "NewBlog" "This is a new blog" "new" "2021-04-06"
+Successfully inserted 6372affa826a9328dcbcfa1b to blog2
+
+Please enter your command:
+> show blog2
+
+Items in blog2
+
+- - - -
+  title: NewBlog
+  userName: ccp
+  permalink: blog2.NewBlog
+  Body:
+     This is a new blog
+  timestamp: 2021-04-06
+
+Please enter your command:
+> comment blog2 "blog2.NewBlog" ccp "Glad to see this is still up" "2022-12-31"
+Successfully inserted 6372affa826a9328dcbcfa1c to blog2
+
+Please enter your command:
+> show blog2
+
+Items in blog2
+
+- - - -
+  title: NewBlog
+  userName: ccp
+  permalink: blog2.NewBlog
+  Body:
+     This is a new blog
+  timestamp: 2021-04-06
+
+  - - - -
+    userName: ccp
+    comment: 
+        Glad to see this is still up
+    permalink: 2022-12-31
+
+
+Please enter your command:
+> show abc
+This collection does not exist
+Please enter your command:
+> comment blog3 "blog1.Test1" ccp "Comment2" "2021-09-01"
+This post does not exist
+
+Please enter your command:
+> delete blog3 "2022-02-03" ccp "2022-11-29"
+This post does not exist
+
+Please enter your command:
+> post
+Syntax error. Usage: <post> <blogname> <username> <title> <postbody> <tags> <timestamp>
+
+Please enter your command:
+> 
+Please try again
+
+Please enter your command:
+> comment
+Syntax error. Usage: <comment> <blogname> <permalink> <username> <commentbody> <timestamp>
+
+Please enter your command:
+> delete
+Syntax error. Usage: <delete> <blogname> <permalink> <username> <timestamp>
+
+Please enter your command:
+> EOF. Goodbye

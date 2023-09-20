@@ -1,0 +1,21 @@
+post blog1 ethan "Test1" "Body1" "tag1, tag2" "2020-06-20"
+post blog1 hank "Test2" "Body2" "tag1" "2021-08-11"
+comment blog1 "blog1.Test1" ccp "Comment1" "2021-08-09"
+comment blog1 "2021-08-09" ethan "comment on a comment" "2022-02-03"
+comment blog1 "blog1.Test1" ccp "Comment2" "2021-09-01"
+comment blog1 "blog1.Test2" hank "Comment3" "2022-01-09"
+show blog1
+delete blog1 "blog1.Test1" ethan "2022-11-14"
+delete blog1 "2022-02-03" ccp "2022-11-29"
+show blog1
+post blog2 ccp "NewBlog" "This is a new blog" "new" "2021-04-06"
+show blog2
+comment blog2 "blog2.NewBlog" ccp "Glad to see this is still up" "2022-12-31"
+show blog2
+show abc
+comment blog3 "blog1.Test1" ccp "Comment2" "2021-09-01"
+delete blog3 "2022-02-03" ccp "2022-11-29"
+post
+
+comment
+delete
